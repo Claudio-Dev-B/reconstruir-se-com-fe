@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Heart, Sparkles, Shield, Gift, Award, Clock, BookOpen, Video, Users, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/Prancheta-1-2.webp";
 import elienePortrait from "@/assets/eliene-portrait.jpg";
 
 const Index = () => {
@@ -99,35 +99,64 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="container mx-auto px-4 py-20 text-center z-10 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
-            Ainda é Tempo de se Reconstruir
-          </h1>
-          <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl leading-relaxed mb-8">
-            <p>Não é sobre encontrar alguém.</p>
-            <p>É sobre se encontrar.</p>
-            <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
-            <p className="pt-4">Talvez você tenha se acostumado a ser forte o tempo todo.</p>
-            <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
-            <p className="pt-4 font-semibold text-primary">Mas Deus não quer que você viva em pedaços —</p>
-            <p className="font-semibold text-primary">Ele quer te ver inteira, restaurada e livre.</p>
-          </div>
-          <Button 
-            size="lg" 
-            variant="hero"
-            onClick={scrollToCTA}
-            className="text-lg px-8 py-6 h-auto"
-          >
+      {/* {/* Hero Section */}
+<section 
+  className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed'
+  }}
+>
+  <div 
+    className="
+      container mx-auto px-4 py-20 z-10 animate-fade-in 
+      text-center md:text-left   /* direita no mobile, esquerda no desktop */
+      pt-[500px] md:pt-0             /* inicia mais abaixo no mobile */
+    "
+  >
+    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <p>Ainda é Tempo de</p> 
+      <p>se Reconstruir</p> 
+    </h1>
+
+    <div 
+      className="
+        max-w-3xl ml-auto md:ml-0   /* texto alinhado conforme o lado */
+        space-y-3 md:space-y-4      /* reduzido o espaçamento vertical */
+        text-lg md:text-xl 
+        leading-snug md:leading-relaxed  /* linhas mais próximas no mobile */
+        mb-8
+      "
+    >
+
+      {/* espaço controlado entre os blocos */}
+      <div className="pt-2 md:pt-4 space-y-1 leading-snug"> 
+      <p>Não é sobre encontrar alguém.</p>
+      <p>É sobre se encontrar.</p>
+      <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
+        <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
+        <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
+      </div>
+
+      {/* bloco final com espaçamento levemente reduzido */}
+      <div className="pt-3 md:pt-4 space-y-1 leading-snug">
+        <p className="font-semibold text-primary">
+          Mas Deus não quer que você viva em pedaços —
+        </p>
+        <p className="font-semibold text-primary">
+          Ele quer te ver inteira, restaurada e livre.
+        </p>
+      </div>
+    </div>
+
+    <Button 
+      size="lg" 
+      variant="hero"
+      onClick={scrollToCTA}
+      className="text-lg px-8 py-6 h-auto"
+   >
             Quero começar minha jornada de reconstrução
           </Button>
         </div>
