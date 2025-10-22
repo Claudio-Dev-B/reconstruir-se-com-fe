@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://claudio-dev-b.github.io/reconstruir-se-com-fe/",
+  "homepage": "https://claudio-dev-b.github.io/reconstruir-se-com-fe",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
