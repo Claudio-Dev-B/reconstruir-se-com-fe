@@ -128,15 +128,16 @@ const [showModules, setShowModules] = useState(false);
 {/* Título sobre a imagem */}
 <h1
   className="
-    absolute left-1/2 -translate-x-1/2 font-bold text-center text-primary
-    leading-tight tracking-tight
-    text-4xl md:text-6xl
-    bottom-4 md:bottom-10
+    absolute left-1/2 -translate-x-1/2 bottom-4
+    font-bold text-center text-primary leading-tight tracking-tight
+    text-4xl
+    w-[90%] max-w-xs
   "
 >
   <span className="block">Ainda é Tempo de</span>
   <span className="block">se Reconstruir</span>
 </h1>
+
 </div>
 
   {/* Conteúdo */}
