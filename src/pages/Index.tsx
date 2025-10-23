@@ -105,9 +105,8 @@ const Index = () => {
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "scroll", // mobile-friendly
+    backgroundAttachment: "scroll", // evita bugs em mobile
   }}
 >
   <div 
@@ -532,7 +531,6 @@ const Index = () => {
 >
   Quero começar minha jornada de reconstrução
 </Button>
-
           </div>
         </div>
       </section>
