@@ -3,15 +3,21 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Heart, Sparkles, Shield, Gift, Award, Clock, BookOpen, Video, Users, Calendar } from "lucide-react";
 import heroImage from "@/assets/Prancheta-1-2.webp";
-import elienePortrait from "@/assets/eliene-portrait.jpg";
+import elienePortrait from "@/assets/Prancheta-1-2.webp";
+import jornada from "@/assets/ainda_e_tempo.webp";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const Index = () => {
   const scrollToCTA = () => {
     const element = document.getElementById("cta-section");
     element?.scrollIntoView({ behavior: "smooth" });
   };
+  
+const [showModules, setShowModules] = useState(false);
 
   const modules = [
+    
     {
       number: "01",
       title: "Aliança e Identidade",
@@ -177,29 +183,42 @@ const Index = () => {
     `}
   </style>
  </section>
-      {/* Descrição do Curso */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 animate-slide-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                O "Ainda é Tempo" é uma jornada de cura e reconstrução interior
-              </h2>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Um curso criado para mulheres que decidiram recomeçar — com fé, com propósito e com amor próprio.
-                </p>
-                <p>
-                  Aqui, você vai reencontrar sua identidade, restaurar sua autoestima e aprender a viver guiada pela presença de Deus, em todas as áreas da sua vida.
-                </p>
-                <p className="font-semibold text-foreground">
-                  São 12 módulos de transformação, com base bíblica e emocional, conduzidos por Eliene Marçal, mentora e líder espiritual que já ajudou milhares de mulheres a se levantarem novamente.
-                </p>
-              </div>
-            </div>
-          </div>
+     {/* Descrição do Curso */}
+<section className="py-20 bg-background">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-16 max-w-6xl mx-auto">
+      
+      {/* Imagem */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+        <img 
+          src={jornada} 
+          alt="Jornada Ainda é Tempo" 
+          className="w-full max-w-sm md:max-w-full rounded-xl shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Texto */}
+      <div className="w-full md:w-1/2 text-center md:text-left animate-slide-up">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          O “Ainda é Tempo” é uma jornada de cura e reconstrução interior
+        </h2>
+        <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <p>
+            Um curso criado para mulheres que decidiram recomeçar — com fé, com propósito e com amor próprio.
+          </p>
+          <p>
+            Aqui, você vai reencontrar sua identidade, restaurar sua autoestima e aprender a viver guiada pela presença de Deus, em todas as áreas da sua vida.
+          </p>
+          <p className="font-semibold text-foreground">
+            São 12 módulos de transformação, com base bíblica e emocional, conduzidos por Eliene Marçal, mentora e líder espiritual que já ajudou milhares de mulheres a se levantarem novamente.
+          </p>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Essa jornada é para você */}
       <section className="py-20 bg-secondary/30">
@@ -229,47 +248,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Módulos do Curso */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                O que você vai viver dentro do curso
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Mais do que aulas, essa é uma experiência de renascimento.
-                Cada módulo foi criado como uma etapa de um processo real de reconstrução,
-                baseado em princípios bíblicos e ferramentas práticas para o dia a dia.
-              </p>
-            </div>
-            
-            <Accordion type="single" collapsible className="space-y-4">
-              {modules.map((module, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="border border-border rounded-lg px-6 bg-card hover:shadow-md transition-all duration-300"
-                >
-                  <AccordionTrigger className="hover:no-underline py-6">
-                    <div className="flex items-center gap-4 text-left">
-                      <span className="text-3xl font-bold text-primary font-serif flex-shrink-0">
-                        {module.number}
-                      </span>
-                      <span className="text-lg font-semibold text-foreground">
-                        {module.title}
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-6 pt-2 pl-16 text-muted-foreground leading-relaxed">
-                    {module.description}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      
+{/* Módulos do Curso */}
+<section className="py-20 bg-background">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          O que você vai viver dentro do curso
+        </h2>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Mais do que aulas, essa é uma experiência de renascimento.
+          Cada módulo foi criado como uma etapa de um processo real de reconstrução,
+          baseado em princípios bíblicos e ferramentas práticas para o dia a dia.
+        </p>
+
+        {/* Botão para expandir a lista */}
+        <button
+          onClick={() => setShowModules(!showModules)}
+          className="mt-6 inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all"
+        >
+          Clique para conhecer os módulos
+          <ChevronDown
+            className={`w-5 h-5 transition-transform duration-300 ${
+              showModules ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+      </div>
+            {/* Lista de módulos (expansível) */}
+      <div
+        className={`transition-all duration-700 overflow-hidden ${
+          showModules ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <Accordion type="single" collapsible className="space-y-4">
+          {modules.map((module, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border border-border rounded-lg px-6 bg-card hover:shadow-md transition-all duration-300"
+            >
+              <AccordionTrigger className="hover:no-underline py-6">
+                <div className="flex items-center gap-4 text-left">
+                  <span className="text-3xl font-bold text-primary font-serif flex-shrink-0">
+                    {module.number}
+                  </span>
+                  <span className="text-lg font-semibold text-foreground">
+                    {module.title}
+                  </span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-6 pt-2 pl-16 text-muted-foreground leading-relaxed">
+                {module.description}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Benefícios */}
 <section className="py-20 bg-gradient-to-b from-primary/10 to-primary/5">
@@ -382,19 +421,26 @@ const Index = () => {
 </Button>
 
 
-                {/* Trust badges */}
-                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-primary" />
-                    <span>Compra 100% segura</span>
+        {/* Trust badges */}
+          <div
+           className="
+           flex flex-wrap items-center justify-center 
+           gap-3 sm:gap-6 
+           text-sm text-muted-foreground 
+            mt-6 sm:mt-8
+         "
+>
+       <div className="flex items-center gap-2">
+         <Shield className="w-5 h-5 text-primary" />
+           <span>Compra 100% segura</span>
+              </div>
+               <div className="flex items-center gap-2">
+                 <Clock className="w-5 h-5 text-primary" />
+                  <span>Acesso imediato</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-primary" />
-                    <span>Acesso imediato</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span>Certificado de conclusão</span>
+                   <div className="flex items-center gap-2">
+                   <CheckCircle2 className="w-5 h-5 text-primary" />
+                   <span>Certificado de conclusão</span>
                   </div>
                 </div>
               </div>
@@ -442,7 +488,7 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
                 Bônus Exclusivos
               </h2>
-              <p className="text-xl text-primary font-semibold">Inclusos para você</p>
+              <p className="text-xl text-primary font-semibold">Para as 50 primeiras</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
