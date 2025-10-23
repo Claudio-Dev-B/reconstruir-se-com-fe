@@ -108,55 +108,39 @@ const [showModules, setShowModules] = useState(false);
     <div className="min-h-screen">
 
  {/* Hero Section */}
-<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex flex-col md:flex-row items-center justify-center">
+<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex flex-col items-center justify-center">
 
   {/* Desktop Background */}
   <div
     className="hidden md:block absolute inset-0 bg-cover bg-center"
     style={{
       backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImage})`,
-      backgroundAttachment: "scroll", // evita bugs em mobile
+      backgroundAttachment: "scroll",
     }}
   />
 
   {/* Mobile Image */}
   <div className="block md:hidden w-full relative">
     <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
-    <div className="absolute inset-0 bg-black/60"></div> {/* sombreado */}
+    <div className="absolute inset-0 bg-black/60"></div>
   </div>
 
-<div 
-  className="
-    container mx-auto px-4 py-20 z-10 animate-fade-in 
-    text-center md:text-left   /* direita no mobile, esquerda no desktop */
-  "
->
+  {/* Conteúdo Hero */}
+  <div className="relative z-10 container mx-auto px-4 py-20 text-center md:text-left animate-fade-in">
     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
       <p>Ainda é Tempo de</p> 
       <p>se Reconstruir</p> 
     </h1>
 
-    <div 
-      className="
-        max-w-3xl ml-auto md:ml-0   /* texto alinhado conforme o lado */
-        space-y-3 md:space-y-4      /* reduzido o espaçamento vertical */
-        text-lg md:text-xl 
-        leading-snug md:leading-relaxed  /* linhas mais próximas no mobile */
-        mb-8
-      "
-    >
-
-      {/* espaço controlado entre os blocos */}
-      <div className="pt-2 md:pt-4 space-y-1 leading-snug"> 
-      <p>Não é sobre encontrar alguém.</p>
-      <p>É sobre se encontrar.</p>
-      <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
+    <div className="max-w-3xl ml-auto md:ml-0 space-y-3 md:space-y-4 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
+      <div className="pt-2 md:pt-4 space-y-1">
+        <p>Não é sobre encontrar alguém.</p>
+        <p>É sobre se encontrar.</p>
+        <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
         <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
         <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
       </div>
-
-      {/* bloco final com espaçamento levemente reduzido */}
-      <div className="pt-3 md:pt-4 space-y-1 leading-snug">
+      <div className="pt-3 md:pt-4 space-y-1">
         <p className="font-semibold text-primary">
           Mas Deus não quer que você viva em pedaços —
         </p>
@@ -166,20 +150,17 @@ const [showModules, setShowModules] = useState(false);
       </div>
     </div>
 
- <Button
-  size="lg"
-  variant="hero"
-  onClick={scrollToCTA}
-  className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
->
-  Quero começar minha jornada de reconstrução
-</Button>
+    <Button
+      size="lg"
+      variant="hero"
+      onClick={scrollToCTA}
+      className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
+    >
+      Quero começar minha jornada de reconstrução
+    </Button>
+  </div>
 
-
-        </div>
-     
-
-      {/* Responsividade no fundo */}
+  {/* Responsividade no fundo */}
   <style>
     {`
       @media (max-width: 768px) {
@@ -191,9 +172,10 @@ const [showModules, setShowModules] = useState(false);
       }
     `}
   </style>
- </section>
-     {/* Descrição do Curso */}
-<section className="py-20 bg-background">
+</section>
+
+{/* Próxima Seção (Descrição do Curso) */}
+<section className="relative z-20 bg-background -mt-16 md:-mt-32">
   <div className="container mx-auto px-4">
     <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-16 max-w-6xl mx-auto">
       
@@ -227,7 +209,6 @@ const [showModules, setShowModules] = useState(false);
     </div>
   </div>
 </section>
-
 
       {/* Essa jornada é para você */}
       <section className="py-20 bg-secondary/30">
