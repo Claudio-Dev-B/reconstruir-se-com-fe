@@ -3,8 +3,9 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Heart, Sparkles, Shield, Gift, Award, Clock, BookOpen, Video, Users, Calendar } from "lucide-react";
 import heroImage from "@/assets/Prancheta-1-2.webp";
-import elienePortrait from "@/assets/Prancheta-1-2.webp";
+import elienePortrait from "@/assets/eliene.webp";
 import jornada from "@/assets/ainda_e_tempo.webp";
+import eliene from "@/assets/eliene.webp"
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -13,7 +14,7 @@ const Index = () => {
     const element = document.getElementById("cta-section");
     element?.scrollIntoView({ behavior: "smooth" });
   };
-  
+
 const [showModules, setShowModules] = useState(false);
 
   const modules = [
@@ -105,23 +106,32 @@ const [showModules, setShowModules] = useState(false);
 
   return (
     <div className="min-h-screen">
-      {/* {/* Hero Section */}
-<section 
-  className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
-  style={{
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "scroll", // evita bugs em mobile
-  }}
+
+     /* Hero Section */
+<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex items-center justify-center">
+
+  {/* Desktop Background */}
+  <div
+    className="hidden md:block absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImage})`,
+      backgroundAttachment: "scroll", // evita bugs em mobile
+    }}
+  />
+
+  {/* Mobile Background */}
+<div className="block md:hidden absolute inset-0 flex items-center justify-center">
+  <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
+  <div className="absolute inset-0 bg-black/60"></div> {/* sombreado similar ao linear-gradient */}
+</div>
+
+<div 
+  className="
+    container mx-auto px-4 py-20 z-10 animate-fade-in 
+    text-center md:text-left   /* direita no mobile, esquerda no desktop */
+    pt-[500px] md:pt-0             /* inicia mais abaixo no mobile */
+  "
 >
-  <div 
-    className="
-      container mx-auto px-4 py-20 z-10 animate-fade-in 
-      text-center md:text-left   /* direita no mobile, esquerda no desktop */
-      pt-[500px] md:pt-0             /* inicia mais abaixo no mobile */
-    "
-  >
     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
       <p>Ainda é Tempo de</p> 
       <p>se Reconstruir</p> 

@@ -19,7 +19,7 @@ All colors MUST be HSL.
     --popover-foreground: 220 20% 15%;
 
     /* Dourado quente - destaque principal */
-    --primary: 45 80% 65%;
+    --primary: 45 85% 40%;
     --primary-foreground: 220 20% 15%;
 
     /* Bege suave - secundário */
@@ -31,7 +31,7 @@ All colors MUST be HSL.
     --muted-foreground: 220 15% 40%;
 
     /* Acentos */
-    --accent: 270 30% 85%;
+    --accent: 40 20% 92%;
     --accent-foreground: 220 20% 15%;
 
     --destructive: 0 84.2% 60.2%;
@@ -44,8 +44,8 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Cores customizadas para o tema */
-    --golden: 45 80% 65%;
-    --golden-dark: 45 70% 50%;
+    --golden: 45 85% 40%;
+    --golden-dark: 45 85% 40%;
     --sand: 40 20% 90%;
     --beige: 40 25% 88%;
     --dark-bg: 220 20% 15%;
