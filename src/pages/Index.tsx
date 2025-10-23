@@ -128,7 +128,7 @@ const [showModules, setShowModules] = useState(false);
     />
     {/* Frase dourada sobre a imagem no mobile */}
     <div className="absolute bottom-6 left-0 w-full text-center">
-      <h1 className="text-3xl font-bold text-[#bfa76f] leading-tight">
+      <h1 className="text-3xl font-bold text-primary leading-tight">
         Ainda é Tempo de se Reconstruir
       </h1>
     </div>
