@@ -107,31 +107,26 @@ const [showModules, setShowModules] = useState(false);
   return (
     <div className="min-h-screen">
 
- {/* Hero Section */}
-<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden">
-
-  {/* Desktop Background Fixo */}
-  <div
-    className="hidden md:block fixed inset-0 bg-cover bg-center z-0"
-    style={{
-      backgroundImage: `url(${heroImage})`,
-      backgroundAttachment: "scroll",
-    }}
-  />
-
-  {/* Mobile Image */}
-  <div className="block md:hidden relative w-full">
-    <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
+ {/* Hero Section - versão simples, sem efeito fixo */}
+<section className="relative min-h-screen bg-dark-bg text-white">
+  
+  {/* Imagem Hero */}
+  <div className="w-full h-full overflow-hidden">
+    <img 
+      src={heroImage} 
+      alt="Hero" 
+      className="w-full h-full object-cover"
+    />
   </div>
 
   {/* Conteúdo Hero */}
-  <div className="relative z-10 container mx-auto px-4 py-40 md:py-60 text-center md:text-left">
+  <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
       <p>Ainda é Tempo de</p> 
       <p>se Reconstruir</p> 
     </h1>
 
-    <div className="max-w-3xl mx-auto md:mx-0 space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
+    <div className="max-w-3xl space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8 text-white">
       <p>Não é sobre encontrar alguém.</p>
       <p>É sobre se encontrar.</p>
       <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
@@ -154,11 +149,10 @@ const [showModules, setShowModules] = useState(false);
       Quero começar minha jornada de reconstrução
     </Button>
   </div>
-
 </section>
 
 {/* Próxima Seção (Descrição do Curso) */}
-<section className="relative z-20 bg-background -mt-16 md:-mt-32">
+<section className="relative z-20 bg-background">
   <div className="container mx-auto px-4">
     <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10 md:gap-16 max-w-6xl mx-auto">
       
@@ -172,7 +166,7 @@ const [showModules, setShowModules] = useState(false);
       </div>
 
       {/* Texto */}
-      <div className="w-full md:w-1/2 text-center md:text-left animate-slide-up">
+      <div className="w-full md:w-1/2 text-center md:text-left animate-slide-up bg-background p-6 md:p-0 rounded-lg md:rounded-none">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
           O “Ainda é Tempo” é uma jornada de cura e reconstrução interior
         </h2>
