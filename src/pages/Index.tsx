@@ -108,11 +108,11 @@ const [showModules, setShowModules] = useState(false);
     <div className="min-h-screen">
 
  {/* Hero Section */}
-<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex flex-col items-center justify-center">
+<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden">
 
-  {/* Desktop Background */}
+  {/* Desktop Background Fixo */}
   <div
-    className="hidden md:block absolute inset-0 bg-cover bg-center"
+    className="hidden md:block fixed inset-0 bg-cover bg-center z-0"
     style={{
       backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImage})`,
       backgroundAttachment: "scroll",
@@ -120,34 +120,30 @@ const [showModules, setShowModules] = useState(false);
   />
 
   {/* Mobile Image */}
-  <div className="block md:hidden w-full relative">
+  <div className="block md:hidden relative w-full">
     <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
     <div className="absolute inset-0 bg-black/60"></div>
   </div>
 
   {/* Conteúdo Hero */}
-  <div className="relative z-10 container mx-auto px-4 py-20 text-center md:text-left animate-fade-in">
+  <div className="relative z-10 container mx-auto px-4 py-40 md:py-60 text-center md:text-left">
     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
       <p>Ainda é Tempo de</p> 
       <p>se Reconstruir</p> 
     </h1>
 
-    <div className="max-w-3xl ml-auto md:ml-0 space-y-3 md:space-y-4 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
-      <div className="pt-2 md:pt-4 space-y-1">
-        <p>Não é sobre encontrar alguém.</p>
-        <p>É sobre se encontrar.</p>
-        <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
-        <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
-        <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
-      </div>
-      <div className="pt-3 md:pt-4 space-y-1">
-        <p className="font-semibold text-primary">
-          Mas Deus não quer que você viva em pedaços —
-        </p>
-        <p className="font-semibold text-primary">
-          Ele quer te ver inteira, restaurada e livre.
-        </p>
-      </div>
+    <div className="max-w-3xl mx-auto md:mx-0 space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
+      <p>Não é sobre encontrar alguém.</p>
+      <p>É sobre se encontrar.</p>
+      <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
+      <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
+      <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
+      <p className="font-semibold text-primary">
+        Mas Deus não quer que você viva em pedaços —
+      </p>
+      <p className="font-semibold text-primary">
+        Ele quer te ver inteira, restaurada e livre.
+      </p>
     </div>
 
     <Button
@@ -160,18 +156,6 @@ const [showModules, setShowModules] = useState(false);
     </Button>
   </div>
 
-  {/* Responsividade no fundo */}
-  <style>
-    {`
-      @media (max-width: 768px) {
-        section {
-          background-attachment: scroll !important;
-          background-position: center !important;
-          background-size: cover !important;
-        }
-      }
-    `}
-  </style>
 </section>
 
 {/* Próxima Seção (Descrição do Curso) */}
@@ -209,6 +193,7 @@ const [showModules, setShowModules] = useState(false);
     </div>
   </div>
 </section>
+
 
       {/* Essa jornada é para você */}
       <section className="py-20 bg-secondary/30">
