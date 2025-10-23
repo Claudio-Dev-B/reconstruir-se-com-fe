@@ -114,7 +114,7 @@ const [showModules, setShowModules] = useState(false);
   <div
     className="hidden md:block fixed inset-0 bg-cover bg-center z-0"
     style={{
-      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImage})`,
+      backgroundImage: `url(${heroImage})`,
       backgroundAttachment: "scroll",
     }}
   />
@@ -122,7 +122,6 @@ const [showModules, setShowModules] = useState(false);
   {/* Mobile Image */}
   <div className="block md:hidden relative w-full">
     <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
-    <div className="absolute inset-0 bg-black/60"></div>
   </div>
 
   {/* Conteúdo Hero */}
