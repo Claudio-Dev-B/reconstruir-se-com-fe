@@ -107,66 +107,62 @@ const [showModules, setShowModules] = useState(false);
   return (
     <div className="min-h-screen">
 
- {/* Hero Section - versão simples, responsiva e sem efeito fixo */}
-<section className="relative bg-dark-bg text-white flex flex-col md:flex-row items-center justify-between md:gap-16 pt-10 md:pt-20">
+ {/*{/* Hero Section */}
+<section className="relative min-h-screen bg-dark-bg text-white mb-10 md:mb-20 overflow-hidden">
 
-  {/* IMAGEM DESKTOP */}
-  <div className="hidden md:block w-1/2 h-full">
-    <img 
-      src={heroImage} 
-      alt="Hero" 
-      className="w-full h-full object-cover"
-    />
-  </div>
+  {/* Fundo Desktop */}
+  <div
+    className="hidden md:block absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${heroImage})`,
+    }}
+  />
 
-  {/* IMAGEM MOBILE */}
-  <div className="relative block md:hidden w-full h-auto">
-    <img 
-      src={eliene} 
-      alt="Eliene Marçal" 
+  {/* Fundo Mobile */}
+  <div className="block md:hidden w-full">
+    <img
+      src={eliene}
+      alt="Eliene Marçal"
       className="w-full h-auto object-cover"
     />
-    {/* Frase dourada sobre a imagem no mobile */}
-    <div className="absolute bottom-6 left-0 w-full text-center">
-      <h1 className="text-3xl font-bold text-primary leading-tight">
-        Ainda é Tempo de se Reconstruir
-      </h1>
-    </div>
   </div>
 
-  {/* CONTEÚDO HERO */}
-  <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left px-6 md:px-12 mt-10 md:mt-0">
-    
-    {/* TÍTULO (desktop apenas) */}
-    <h1 className="hidden md:block text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#bfa76f]">
-      <p>Ainda é Tempo de</p> 
-      <p>se Reconstruir</p> 
-    </h1>
+  {/* Conteúdo */}
+  <div className="relative container mx-auto px-4 py-16 md:py-32 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start z-10">
 
-    {/* TEXTO PRINCIPAL */}
-    <div className="max-w-3xl space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
-      <p>Não é sobre encontrar alguém.</p>
-      <p>É sobre se encontrar.</p>
-      <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
-      <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
-      <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
-      <p className="font-semibold text-primary">
-        Mas Deus não quer que você viva em pedaços —
-      </p>
-      <p className="font-semibold text-primary">
-        Ele quer te ver inteira, restaurada e livre.
-      </p>
+    {/* Bloco de texto */}
+    <div className="w-full md:w-1/2 text-center md:text-left max-w-3xl md:max-w-xl">
+      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#bfa76f] md:text-white">
+        <span className="block">Ainda é Tempo de</span>
+        <span className="block">se Reconstruir</span>
+      </h1>
+
+      <div className="space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
+        <p>Não é sobre encontrar alguém.</p>
+        <p>É sobre se encontrar.</p>
+        <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
+        <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
+        <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
+        <p className="font-semibold text-primary">
+          Mas Deus não quer que você viva em pedaços —
+        </p>
+        <p className="font-semibold text-primary">
+          Ele quer te ver inteira, restaurada e livre.
+        </p>
+      </div>
+
+      <Button
+        size="lg"
+        variant="hero"
+        onClick={scrollToCTA}
+        className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug mx-auto md:mx-0"
+      >
+        Quero começar minha jornada de reconstrução
+      </Button>
     </div>
 
-    {/* BOTÃO */}
-    <Button
-      size="lg"
-      variant="hero"
-      onClick={scrollToCTA}
-      className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug mx-auto md:mx-0"
-    >
-      Quero começar minha jornada de reconstrução
-    </Button>
+    {/* Espaço reservado para imagem no desktop (visual / alinhamento) */}
+    <div className="hidden md:block md:w-1/2" aria-hidden="true"></div>
   </div>
 </section>
 
