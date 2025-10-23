@@ -101,12 +101,13 @@ const Index = () => {
     <div className="min-h-screen">
       {/* {/* Hero Section */}
 <section 
-   className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
+  className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "scroll", // mobile-friendly
   }}
 >
   <div 
@@ -151,14 +152,15 @@ const Index = () => {
       </div>
     </div>
 
-    <Button
-       size="lg"
-       variant="hero"
-       onClick={scrollToCTA}
-       className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center"
+ <Button
+  size="lg"
+  variant="hero"
+  onClick={scrollToCTA}
+  className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
 >
-       Quero começar minha jornada de reconstrução
-      </Button>
+  Quero começar minha jornada de reconstrução
+</Button>
+
 
         </div>
      
@@ -371,13 +373,15 @@ const Index = () => {
                 </div>
 
                 {/* CTA Principal */}
-                <Button 
-                  size="lg" 
-                  variant="hero"
-                  className="w-full text-xl py-8 h-auto mb-6 shadow-2xl hover:scale-105 transition-all duration-300"
-                >
-                  Quero começar minha jornada de reconstrução
-                </Button>
+<Button
+  size="lg"
+  variant="hero"
+  onClick={scrollToCTA}
+  className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
+>
+  Quero começar minha jornada de reconstrução
+</Button>
+
 
                 {/* Trust badges */}
                 <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
@@ -520,17 +524,15 @@ const Index = () => {
               <p>Não é tarde demais.</p>
               <p>Não importa o que aconteceu, você pode se reconstruir — inteira, livre e amada.</p>
             </div>
-            <Button 
-              size="lg" 
-              variant="hero"
-              onClick={scrollToCTA}
-              className="text-lg px-8 py-6 h-auto"
-            >
-              Quero começar minha jornada de reconstrução
-            </Button>
-          </div>
-        </div>
-      </section>
+<Button
+  size="lg"
+  variant="hero"
+  onClick={scrollToCTA}
+  className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
+>
+  Quero começar minha jornada de reconstrução
+</Button>
+
 
       {/* Footer */}
       <footer className="py-8 bg-dark-bg text-white/80 text-center">
