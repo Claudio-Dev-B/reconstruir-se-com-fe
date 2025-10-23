@@ -533,6 +533,9 @@ const Index = () => {
   Quero começar minha jornada de reconstrução
 </Button>
 
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 bg-dark-bg text-white/80 text-center">
