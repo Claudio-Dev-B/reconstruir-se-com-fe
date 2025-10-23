@@ -107,11 +107,11 @@ const [showModules, setShowModules] = useState(false);
   return (
     <div className="min-h-screen">
 
- {/* Hero Section - versão simples, sem efeito fixo */}
-<section className="relative min-h-screen bg-dark-bg text-white">
-  
-   {/* Imagem Desktop */}
-  <div className="hidden md:block w-full h-full">
+ {/* Hero Section - versão simples, responsiva e sem efeito fixo */}
+<section className="relative bg-dark-bg text-white flex flex-col md:flex-row items-center justify-between md:gap-16 pt-10 md:pt-20">
+
+  {/* IMAGEM DESKTOP */}
+  <div className="hidden md:block w-1/2 h-full">
     <img 
       src={heroImage} 
       alt="Hero" 
@@ -119,23 +119,32 @@ const [showModules, setShowModules] = useState(false);
     />
   </div>
 
-  {/* Imagem Mobile */}
-  <div className="block md:hidden w-full h-full">
+  {/* IMAGEM MOBILE */}
+  <div className="relative block md:hidden w-full h-auto">
     <img 
       src={eliene} 
       alt="Eliene Marçal" 
-      className="w-full h-full object-cover"
+      className="w-full h-auto object-cover"
     />
+    {/* Frase dourada sobre a imagem no mobile */}
+    <div className="absolute bottom-6 left-0 w-full text-center">
+      <h1 className="text-3xl font-bold text-[#bfa76f] leading-tight">
+        Ainda é Tempo de se Reconstruir
+      </h1>
+    </div>
   </div>
 
-  {/* Conteúdo Hero */}
-  <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+  {/* CONTEÚDO HERO */}
+  <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left px-6 md:px-12 mt-10 md:mt-0">
+    
+    {/* TÍTULO (desktop apenas) */}
+    <h1 className="hidden md:block text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#bfa76f]">
       <p>Ainda é Tempo de</p> 
       <p>se Reconstruir</p> 
     </h1>
 
-    <div className="max-w-3xl space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8 text-white">
+    {/* TEXTO PRINCIPAL */}
+    <div className="max-w-3xl space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
       <p>Não é sobre encontrar alguém.</p>
       <p>É sobre se encontrar.</p>
       <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
@@ -149,11 +158,12 @@ const [showModules, setShowModules] = useState(false);
       </p>
     </div>
 
+    {/* BOTÃO */}
     <Button
       size="lg"
       variant="hero"
       onClick={scrollToCTA}
-      className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug"
+      className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center whitespace-normal break-words leading-snug mx-auto md:mx-0"
     >
       Quero começar minha jornada de reconstrução
     </Button>
