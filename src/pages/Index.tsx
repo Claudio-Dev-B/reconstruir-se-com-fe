@@ -107,7 +107,7 @@ const [showModules, setShowModules] = useState(false);
   return (
     <div className="min-h-screen">
 
- {/*{/* Hero Section */}
+ {/* Hero Section */}
 <section className="relative min-h-screen bg-dark-bg text-white mb-10 md:mb-20 overflow-hidden">
 
   {/* Fundo Desktop */}
@@ -119,12 +119,17 @@ const [showModules, setShowModules] = useState(false);
   />
 
   {/* Fundo Mobile */}
-  <div className="block md:hidden w-full">
+  <div className="block md:hidden w-full relative">
     <img
       src={eliene}
       alt="Eliene Marçal"
       className="w-full h-auto object-cover"
     />
+    {/* Título sobre a imagem (mobile) */}
+    <h1 className="absolute bottom-6 left-1/2 -translate-x-1/2 text-4xl font-bold text-[#bfa76f] text-center leading-tight">
+      <span className="block">Ainda é Tempo de</span>
+      <span className="block">se Reconstruir</span>
+    </h1>
   </div>
 
   {/* Conteúdo */}
@@ -132,18 +137,19 @@ const [showModules, setShowModules] = useState(false);
 
     {/* Bloco de texto */}
     <div className="w-full md:w-1/2 text-center md:text-left max-w-3xl md:max-w-xl">
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#bfa76f] md:text-white">
+      {/* Título Desktop */}
+      <h1 className="hidden md:block text-7xl font-bold mb-6 leading-tight text-white">
         <span className="block">Ainda é Tempo de</span>
         <span className="block">se Reconstruir</span>
       </h1>
 
-      <div className="space-y-3 text-lg md:text-xl leading-snug md:leading-relaxed mb-8">
-        <p>Não é sobre encontrar alguém.</p>
-        <p>É sobre se encontrar.</p>
-        <p>Sobre curar as feridas que te afastaram de quem Deus te criou para ser.</p>
-        <p>Talvez você tenha se acostumado a ser forte o tempo todo.</p>
-        <p>A esconder a dor, a seguir sorrindo mesmo cansada.</p>
-        <p className="font-semibold text-primary">
+      {/* Parágrafo principal com menos espaçamento */}
+      <div className="text-lg md:text-xl leading-snug md:leading-relaxed mb-8 space-y-1">
+        <p>
+          Não é sobre encontrar alguém. É sobre se encontrar. Sobre curar as feridas que te afastaram de quem Deus te criou para ser.
+          Talvez você tenha se acostumado a ser forte o tempo todo. A esconder a dor, a seguir sorrindo mesmo cansada.
+        </p>
+        <p className="font-semibold text-primary mt-4">
           Mas Deus não quer que você viva em pedaços —
         </p>
         <p className="font-semibold text-primary">
@@ -160,6 +166,7 @@ const [showModules, setShowModules] = useState(false);
         Quero começar minha jornada de reconstrução
       </Button>
     </div>
+
 
     {/* Espaço reservado para imagem no desktop (visual / alinhamento) */}
     <div className="hidden md:block md:w-1/2" aria-hidden="true"></div>
