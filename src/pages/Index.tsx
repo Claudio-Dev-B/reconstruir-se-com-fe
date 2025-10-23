@@ -107,8 +107,8 @@ const [showModules, setShowModules] = useState(false);
   return (
     <div className="min-h-screen">
 
-     /* Hero Section */
-<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex items-center justify-center">
+ {/* Hero Section */}
+<section className="relative min-h-screen bg-dark-bg text-white overflow-hidden flex flex-col md:flex-row items-center justify-center">
 
   {/* Desktop Background */}
   <div
@@ -119,17 +119,16 @@ const [showModules, setShowModules] = useState(false);
     }}
   />
 
-  {/* Mobile Background */}
-<div className="block md:hidden absolute inset-0 flex items-center justify-center">
-  <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
-  <div className="absolute inset-0 bg-black/60"></div> {/* sombreado similar ao linear-gradient */}
-</div>
+  {/* Mobile Image */}
+  <div className="block md:hidden w-full relative">
+    <img src={eliene} alt="Eliene" className="w-full h-auto object-cover" />
+    <div className="absolute inset-0 bg-black/60"></div> {/* sombreado */}
+  </div>
 
 <div 
   className="
     container mx-auto px-4 py-20 z-10 animate-fade-in 
     text-center md:text-left   /* direita no mobile, esquerda no desktop */
-    pt-[500px] md:pt-0             /* inicia mais abaixo no mobile */
   "
 >
     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
