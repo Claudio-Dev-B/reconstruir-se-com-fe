@@ -101,12 +101,12 @@ const Index = () => {
     <div className="min-h-screen">
       {/* {/* Hero Section */}
 <section 
-  className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
+   className="relative min-h-screen flex items-center justify-center bg-dark-bg text-white overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed'
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
   }}
 >
   <div 
@@ -161,6 +161,19 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      {/* Responsividade no fundo */}
+  <style>
+    {`
+      @media (max-width: 768px) {
+        section {
+          background-attachment: scroll !important;
+          background-position: center !important;
+          background-size: cover !important;
+        }
+      }
+    `}
+  </style>
 
       {/* Descrição do Curso */}
       <section className="py-20 bg-background">
