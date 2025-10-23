@@ -151,16 +151,17 @@ const Index = () => {
       </div>
     </div>
 
-    <Button 
-      size="lg" 
-      variant="hero"
-      onClick={scrollToCTA}
-      className="text-lg px-8 py-6 h-auto"
-   >
-            Quero começar minha jornada de reconstrução
-          </Button>
+    <Button
+       size="lg"
+       variant="hero"
+       onClick={scrollToCTA}
+       className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto w-[90%] sm:w-auto text-center"
+>
+       Quero começar minha jornada de reconstrução
+      </Button>
+
         </div>
-      </section>
+     
 
       {/* Responsividade no fundo */}
   <style>
@@ -174,7 +175,7 @@ const Index = () => {
       }
     `}
   </style>
-
+ </section>
       {/* Descrição do Curso */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -270,27 +271,27 @@ const Index = () => {
       </section>
 
       {/* Benefícios */}
-      <section className="py-20 bg-gradient-to-b from-primary/10 to-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
-              Você vai conquistar:
-            </h2>
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center gap-4 text-lg animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CheckCircle2 className="w-7 h-7 text-primary flex-shrink-0" />
-                  <p className="text-foreground font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
+<section className="py-20 bg-gradient-to-b from-primary/10 to-primary/5">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+        Você vai conquistar:
+      </h2>
+      <div className="space-y-4 text-left inline-block">
+        {benefits.map((benefit, index) => (
+          <div
+            key={index}
+            className="flex items-center gap-4 text-lg animate-slide-up"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <CheckCircle2 className="w-7 h-7 text-primary flex-shrink-0" />
+            <p className="text-foreground font-medium">{benefit}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Investimento - Destacado com neuromarketing */}
       <section id="cta-section" className="py-32 bg-gradient-to-b from-primary/20 via-primary/10 to-background relative overflow-hidden">
