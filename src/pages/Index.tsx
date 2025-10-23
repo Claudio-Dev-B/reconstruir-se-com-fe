@@ -125,12 +125,19 @@ const [showModules, setShowModules] = useState(false);
       alt="Eliene Marçal"
       className="w-full h-auto object-cover"
     />
-    {/* Título sobre a imagem (mobile) */}
-    <h1 className="absolute bottom-4 left-1/2 -translate-x-1/2 text-4xl font-bold text-primary text-center leading-tight">
-      <span className="block">Ainda é Tempo de</span>
-      <span className="block">se Reconstruir</span>
-    </h1>
-  </div>
+{/* Título sobre a imagem */}
+<h1
+  className="
+    absolute left-1/2 -translate-x-1/2 font-bold text-center text-primary
+    leading-tight tracking-tight
+    text-4xl md:text-6xl
+    bottom-4 md:bottom-10
+  "
+>
+  <span className="block">Ainda é Tempo de</span>
+  <span className="block">se Reconstruir</span>
+</h1>
+</div>
 
   {/* Conteúdo */}
   <div className="relative container mx-auto px-4 py-10 md:py-32 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start z-10">
@@ -138,11 +145,11 @@ const [showModules, setShowModules] = useState(false);
     {/* Bloco de texto */}
     <div className="w-full md:w-1/2 text-center md:text-left max-w-3xl md:max-w-xl">
 
-      {/* Título Desktop */}
-      <h1 className="hidden md:block text-7xl font-bold mb-6 leading-tight text-white">
-        <span className="block">Ainda é Tempo de</span>
-        <span className="block">se Reconstruir</span>
-      </h1>
+     {/* Título Desktop */}
+<h1 className="hidden md:block text-7xl font-bold mb-6 leading-tight text-white text-left w-max">
+  <span className="block">Ainda é Tempo de</span>
+  <span className="block">se Reconstruir</span>
+</h1>
 
       {/* Parágrafo principal com menos espaçamento */}
       <div className="text-lg md:text-xl leading-snug md:leading-relaxed mt-4 md:mt-0 mb-8 space-y-1">
@@ -151,9 +158,7 @@ const [showModules, setShowModules] = useState(false);
           Talvez você tenha se acostumado a ser forte o tempo todo. A esconder a dor, a seguir sorrindo mesmo cansada.
         </p>
         <p className="font-semibold text-primary mt-4">
-          Mas Deus não quer que você viva em pedaços —
-        </p>
-        <p className="font-semibold text-primary">
+          Mas Deus não quer que você viva em pedaços!
           Ele quer te ver inteira, restaurada e livre.
         </p>
       </div>
