@@ -110,11 +110,20 @@ const [showModules, setShowModules] = useState(false);
  {/* Hero Section - versão simples, sem efeito fixo */}
 <section className="relative min-h-screen bg-dark-bg text-white">
   
-  {/* Imagem Hero */}
-  <div className="w-full h-full overflow-hidden">
+   {/* Imagem Desktop */}
+  <div className="hidden md:block w-full h-full">
     <img 
       src={heroImage} 
       alt="Hero" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Imagem Mobile */}
+  <div className="block md:hidden w-full h-full">
+    <img 
+      src={eliene} 
+      alt="Eliene Marçal" 
       className="w-full h-full object-cover"
     />
   </div>
@@ -500,7 +509,7 @@ const [showModules, setShowModules] = useState(false);
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"></div>
                   <img 
-                    src={elienePortrait} 
+                    src={eliene} 
                     alt="Eliene Marçal"
                     className="relative rounded-full w-64 h-64 object-cover shadow-2xl border-4 border-primary/20"
                   />
